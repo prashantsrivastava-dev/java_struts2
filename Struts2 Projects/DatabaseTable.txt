@@ -1,0 +1,47 @@
+/* For Oracle Database config setup */
+set autocommit on;
+commit;
+
+
+/* For Creating Student Table */
+CREATE TABLE student(id int NOT NULL, name varchar2(50) NOT NULL, CONSTRAINT student_pk PRIMARY KEY (id));  
+
+/* For Insert Value into Student Table */
+INSERT INTO student (id, name) VALUES (1, 'studentA');  
+INSERT INTO student (id, name) VALUES (2, 'studentB');  
+INSERT INTO student (id, name) VALUES (3, 'studentC'); 
+
+
+
+/* For Creating Login_Info Table */
+CREATE TABLE login_info(user_name varchar2(30) NOT NULL, password varchar2(30) NOT NULL);
+
+/* For Insert Value into Login_Info Table */
+INSERT INTO login_info (user_name, password) VALUES ('prashant', 'prashant123');
+
+
+/* For Creating Product Table */
+CREATE TABLE product(prod_id varchar2(30) NOT NULL, prod_name varchar2(30) NOT NULL, prod_category varchar2(30) NOT NULL, prod_price number(38) NOT NULL, CONSTRAINT product_pk PRIMARY KEY (prod_id));
+
+/* For Insert Value into Product Table */
+INSERT INTO product (prod_id, prod_name, prod_category, prod_price) VALUES ('p001', 'iPhone', 'Mobile phones', 10000);
+INSERT INTO product (prod_id, prod_name, prod_category, prod_price) VALUES ('p002', 'Sony Bravia', 'Television', 7000);  
+INSERT INTO product (prod_id, prod_name, prod_category, prod_price) VALUES ('p003', 'Nikes Shoes', 'Mens Fashion', 4000);
+    
+
+/* For details of Table */
+desc student;
+
+/* For Adding a Column of particular table */
+ALTER TABLE product ADD created_date varchar2(20); 
+
+
+
+/* For Deleting a Column of particular table if Required */
+ALTER TABLE product DROP column created_date; 
+
+/* For Deleting a Table if Required */
+DROP TABLE student;
+
+/* For Truncate a Table if Required */
+TRUNCATE TABLE product;
