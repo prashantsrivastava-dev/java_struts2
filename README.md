@@ -1,1 +1,1 @@
-# java_struts2
+# Java_Struts2 Project using Oracle Database.
