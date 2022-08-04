@@ -1,1 +1,1 @@
-# Java_Struts2 Project using Oracle Database. It's have login and logout featue and showing product in a table.
+# Java_Struts2 Project using Oracle Database. It's have login and logout feature and showing product in a table.
